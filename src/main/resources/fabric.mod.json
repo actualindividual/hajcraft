@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "hajcraft",
+	"version": "${version}",
+	"name": "hajcraft",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hajcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"e.hajcraft.Hajcraft"
+		],
+		"client": [
+			"e.hajcraft.HajcraftClient"
+		],
+		"fabric-datagen": [
+			"e.hajcraft.HajcraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"hajcraft.mixins.json",
+		{
+			"config": "hajcraft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
