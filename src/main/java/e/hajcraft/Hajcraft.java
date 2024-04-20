@@ -5,7 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import e.hajcraft.block.ModBlocks;
+import e.hajcraft.block.HajBlocks;
+
 
 public class Hajcraft implements ModInitializer {
 	public static final String MOD_ID = "hajcraft";
@@ -16,8 +17,7 @@ public class Hajcraft implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModBlocks.registerModBlocks();
-
+		HajBlocks.register(); //register method for all blocks and block items :3
 		LOGGER.info("Hello Fabric world!");
 	}
 }
